@@ -41,6 +41,7 @@ class UserConnect(UserRequestInterface):
 
     def login(self, request):
         data = get_request_data(request)
+        print(data)
 
         try:
             requests.get('http://127.0.0.1:8000/api/auth/login/', data=json.dumps(data))
